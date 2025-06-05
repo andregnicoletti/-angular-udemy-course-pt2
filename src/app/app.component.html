@@ -22,3 +22,11 @@
 
 <br />
 <button (click)="onButtonClick()">Mudar Props</button>
+
+<br />
+<button (click)="onButtonVerdeClick()">Verde</button>
+<button (click)="onButtonVermelhoClick()">Vermelho</button>
+<button [class]="{
+  'red-button': isRed,
+  'green-button': isGreen,
+}">Cor do Botao</button>

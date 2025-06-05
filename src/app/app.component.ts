@@ -15,6 +15,9 @@ export class AppComponent {
 
   buttonDisabled = false;
 
+  isRed = false;
+  isGreen = false;
+
   enableInput() {
     this.isDisabled = false;
   }
@@ -48,5 +51,15 @@ export class AppComponent {
   onButtonClick() {
     this.buttonLogTitle = 'Título alteradoooooooooo';
     this.buttonDisabled = !this.buttonDisabled;
+  }
+
+  onButtonVerdeClick(){
+    this.isGreen=true;
+    this.isRed=false;
+  }
+
+  onButtonVermelhoClick(){
+    this.isGreen=false;
+    this.isRed=true;
   }
 }
