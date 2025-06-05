@@ -11,6 +11,9 @@ export class AppComponent {
   inputText = 'Meu texto inicial';
   inputType = 'text';
   isDisabled = false;
+  buttonLogTitle = 'Botão de log';
+
+  buttonDisabled = false;
 
   enableInput() {
     this.isDisabled = false;
@@ -37,8 +40,13 @@ export class AppComponent {
     console.log(currentText);
   }
 
-  handleInputEvent(event: Event){
-    const currentText = (event.target as HTMLInputElement).value
-    console.log("-> " + currentText)
+  handleInputEvent(event: Event) {
+    const currentText = (event.target as HTMLInputElement).value;
+    console.log('-> ' + currentText);
+  }
+
+  onButtonClick() {
+    this.buttonLogTitle = 'Título alteradoooooooooo';
+    this.buttonDisabled = !this.buttonDisabled;
   }
 }
